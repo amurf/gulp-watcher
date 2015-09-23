@@ -1,0 +1,27 @@
+{
+  "name": "gulp-watcher",
+  "version": "1.0.0",
+  "description": "package.json for gulp-watcher container",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/amurf/gulp-watcher.git"
+  },
+  "author": "Ashley Murphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amurf/gulp-watcher/issues"
+  },
+  "homepage": "https://github.com/amurf/gulp-watcher#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+    "gulp-watch": "^4.3.5",
+    "node-sass": "^3.3.3"
+  }
+}
