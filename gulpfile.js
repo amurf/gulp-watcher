@@ -56,5 +56,5 @@ gulp.task('templates:watch', function() {
     gulp.watch(template_files, ['templates']);
 });
 
-gulp.task('default', ['js', 'templates']);
+gulp.task('default', ['js', 'templates', 'sass']);
 gulp.task('watch',   ['js:watch', 'templates:watch', 'sass:watch']);
