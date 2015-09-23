@@ -12,9 +12,8 @@ var templateCache = require('gulp-angular-templatecache');
 // Globals.
 var dest = './app/';
 
-var js_files       = 'src/js/*.js';
+var js_files       = 'src/js/**';
 var template_files = 'src/templates/**';
-
 var main_sass_file = 'src/sass/ea.scss';
 var sass_files     = 'src/sass/**';
 
