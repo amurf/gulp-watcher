@@ -12,15 +12,15 @@ var templateCache = require('gulp-angular-templatecache');
 // Globals.
 var dest = './app/';
 
-var js_files       = 'src/js/**';
-var template_files = 'src/templates/**';
-var main_sass_file = 'src/sass/ea.scss';
+var js_files       = ['src/js/*.js', 'src/js/*/*.js'];
+var template_files = ['src/templates/*.html', 'src/templates/*/*.html'];
+var main_sass_file = 'src/sass/app.scss';
 var sass_files     = 'src/sass/**';
 
 gulp.task('js', function() {
     return gulp.src(js_files)
         .pipe(sourcemaps.init())
-        .pipe(concat('ea.js'))
+        .pipe(concat('app.js'))
         .pipe(babel())
         .pipe(uglify())
         .pipe(sourcemaps.write('./maps'))
@@ -29,7 +29,7 @@ gulp.task('js', function() {
 
 gulp.task('templates', function() {
     return gulp.src(template_files)
-        .pipe(templateCache('ea.templates.js', {module: 'ea'}))
+        .pipe(templateCache('app.templates.js', {module: process.env.ANGULAR_APP_NAME}))
         .pipe(gulp.dest(dest))
 });
 
@@ -49,7 +49,7 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('js:watch', function() {
-    gulp.watch(sass_files, ['js']);
+    gulp.watch(js_files, ['js']);
 });
 
 gulp.task('templates:watch', function() {
